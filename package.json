@@ -1,0 +1,27 @@
+{
+  "name": "component-install",
+  "version": "1.0.0",
+  "description": "component-install\r =================",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -R spec --timeout 10000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ForbesLindesay/component-install.git"
+  },
+  "author": "ForbesLindesay",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "gitHead": "b524e2b9eb2292a2b47254f57c9e1dbc05c09ecb",
+  "dependencies": {
+    "q": "~0.9",
+    "mkdirp": "~0.3",
+    "superagent": "~0.12"
+  },
+  "devDependencies": {
+    "rimraf": "~2.1.4",
+    "mocha-as-promised": "~1.2.1",
+    "mocha": "~1.8.1"
+  }
+}
