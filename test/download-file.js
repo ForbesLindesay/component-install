@@ -7,8 +7,8 @@ var download = require('../lib/download-file');
 
 function checkDownloaded(res) {
   assert.equal(
-    fs.readFileSync(join(__dirname, 'fixture', 'download-file', 'test.html')).toString().replace(/\r/g, ''),
-    (res || fs.readFileSync(join(__dirname, 'output', 'download-file', 'test.html')).toString()).replace(/\r/g, ''));
+    (res || fs.readFileSync(join(__dirname, 'output', 'download-file', 'test.html')).toString()).replace(/\r/g, ''),
+    fs.readFileSync(join(__dirname, 'fixture', 'download-file', 'test.html')).toString().replace(/\r/g, ''));
 }
 
 describe('download file', function () {
