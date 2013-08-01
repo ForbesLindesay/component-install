@@ -1,4 +1,3 @@
-
 /**
  * Module dependencies.
  */
@@ -37,6 +36,7 @@ module.exports = function(el){
  */
 
 function ClassList(el) {
+  if (!el) throw new Error('A DOM element reference is required');
   this.el = el;
   this.list = el.classList;
 }
@@ -143,8 +143,9 @@ ClassList.prototype.toggle = function(name){
  */
 
 ClassList.prototype.array = function(){
-  var arr = this.el.className.split(re);
-  if ('' === arr[0]) arr.pop();
+  var str = this.el.className.replace(/^\s+|\s+$/g, '');
+  var arr = str.split(re);
+  if ('' === arr[0]) arr.shift();
   return arr;
 };
 
