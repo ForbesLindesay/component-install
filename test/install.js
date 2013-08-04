@@ -26,6 +26,14 @@ describe('install', function () {
         });
     });
   });
+  describe('install(directory, false, output)', function () {
+    it('installs the component along with its dependencies into the output directory', function (done) {
+      return install(join(__dirname, 'output', 'install'), false, join(__dirname, 'output', 'install', 'deps'))
+        .then(function () {
+          equalDir(join(__dirname, 'output', 'install'), join(__dirname, 'fixture', 'install-res-3'));
+        });
+    });
+  });
   afterEach(function () {
     rimraf.sync(join(__dirname, 'output'));
   });
