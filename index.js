@@ -8,7 +8,11 @@ var mkdirp = require('mkdirp');
 var download = require('./lib/download-file');
 
 module.exports = install;
-function install(directory, dev, callback) {
+function install(directory, dev, out, callback) {
+  if (typeof out === 'function') {
+    callback = out;
+    out = join(directory, 'components');
+  }
   return read(join(directory, 'component.json'))
     .then(function (data) {
       try {
@@ -17,7 +21,7 @@ function install(directory, dev, callback) {
         err.message += ' in component.json';
         throw err;
       }
-      return installDependencies(data, join(directory, 'components'), dev || false, {}).nodeify(callback);
+      return installDependencies(data, out, dev || false, {}).nodeify(callback);
     })
 }
 
