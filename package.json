@@ -15,14 +15,14 @@
   "readmeFilename": "README.md",
   "gitHead": "b524e2b9eb2292a2b47254f57c9e1dbc05c09ecb",
   "dependencies": {
-    "q": "~0.9",
-    "mkdirp": "~0.3",
-    "hyperquest": "~0.1.0",
-    "concat-stream": "~0.1.1"
+    "q": "~1.4.1",
+    "mkdirp": "~0.5.1",
+    "hyperquest": "~2.1.2",
+    "concat-stream": "~1.6.0"
   },
   "devDependencies": {
-    "rimraf": "~2.1.4",
-    "mocha-as-promised": "~1.2.1",
-    "mocha": "~1.8.1"
+    "rimraf": "~2.6.1",
+    "mocha-as-promised": "~2.0.0",
+    "mocha": "~3.2.0"
   }
 }
